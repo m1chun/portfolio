@@ -1,6 +1,7 @@
 html{
   --color-accent: oklch(0.7 0.0691 196.94);
   accent-color: var(--color-accent);
+  color-scheme: light dark;
 }
 
 body {
@@ -10,9 +11,11 @@ body {
   font: 100%/1.5 system-ui;
   max-width: 100ch;
   margin-inline: max(1em, (100% - 100ch) / 2);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav {
+  --border-color: oklch(50% 10% 200 / 40%);
   display: flex;
   justify-content: space-around;
   align-items: center; 
@@ -20,7 +23,7 @@ nav {
   margin-bottom: 0.5em;
   border-bottom-width: 1px;
   border-bottom-style: solid;
-  border-bottom-color: oklch(80% 3% 200);
+  border-bottom-color: var(--border-color);
 }
 
 nav a{
@@ -41,7 +44,7 @@ nav a.current{
 
 nav a:hover{
   border-bottom-color: var(--color-accent);
-  background-color: oklch(from var(--color-accent) 95% 5% h);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 form {
@@ -59,9 +62,9 @@ label {
 }
 
 input,
-textarea {
-  width: 100%;
-  box-sizing: border-box;
+textarea, 
+select{
+  font-family: inherit;
 }
 
 button {
@@ -182,4 +185,13 @@ a:hover {
   .photo-box {
     width: 90%;
   }
+}
+
+.color-scheme {
+  position: fixed; 
+  top: 2rem;       
+  right: 6rem;     
+  z-index: 10;  
+  font-family: inherit;
+  font-size: 80%;
 }
