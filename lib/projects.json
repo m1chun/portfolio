@@ -2,19 +2,19 @@
     {
         "title": "Multichannel Sensor Analysis for Fall Detection: Evaluating Accelerometer, Gyroscope, and Magnetometer Data in Real-World Settings",
         "year": "July 2025 - August 2025",
-        "image": "../images/timeseries-final-boxplot.png",
+        "image": "/images/timeseries-final-boxplot.png",
         "description": "Processed wearable sensor data (accelerometer, gyroscope, magnetometer) for fall detection analysis.\nDeveloped and compared tabular vs. time-series machine learning models using Scikit-learn and Aeon.\nIdentified acceleration-only models as most effective (F1 = 0.99, AUC = 1.0)\nHighlighted an efficient, interpretable approach for real-world fall detection"
     },
     {
         "title": "Pizza Perplexion Data Visualization",
         "year": "October 2025",
-        "image": "../images/pizza-perplexion.png",
+        "image": "/images/pizza-perplexion.png",
         "description": "Visualizing trends from a grocery store dataset. I found that Whole Foods pizzas are more expensive yet not healthier than pizzas from Walmart and Target."
     },
     {
         "title": "Predicting Recipe Health Final Project",
         "year": "June 2025",
-        "image": "../images/recipe-health.png",
+        "image": "/images/recipe-health.png",
         "description": "Built a supervised ML pipeline in Scikit-learn to classify recipe healthiness using ingredient data. Cleaned and preprocessed text-based ingredients, engineered features like ingredient count and binary indicators. Improved F1 score from 0.67 to 0.77 through cross-validation and hyperparameter tuning. Published report and visualizations on GitHub Pages using Jupyter Notebook and Markdown"
     },
     {
