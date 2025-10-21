@@ -103,3 +103,68 @@ form?.addEventListener('submit', function(event) {
     // Open the email client with the encoded URL
     location.href = url;
 });
+
+export async function fetchJSON(url) {
+  try {
+    // Fetch the JSON file from the given URL
+    const response = await fetch(url);
+    console.log('Fetch response:', response); // 👈 add this here
+
+  if (!response.ok) {
+  throw new Error(`Failed to fetch projects: ${response.statusText}`);
+  }   
+  const data = await response.json();
+    return data;
+  } catch (error) {
+    console.error('Error fetching or parsing JSON data:', error);
+  }
+}
+
+export function renderProjects(projects, containerElement, headingLevel = 'h2') {
+  if (!containerElement) return; // Safety check
+
+  containerElement.innerHTML = '';
+
+  if (!projects || projects.length === 0) {
+    // Show placeholder if no projects
+    const placeholder = document.createElement('p');
+    placeholder.textContent = 'No projects available at the moment.';
+    containerElement.appendChild(placeholder);
+    return;
+  }
+
+  projects.forEach(project => {
+    const article = document.createElement('article');
+
+    // Create dynamic heading
+    const heading = document.createElement(headingLevel);
+    heading.textContent = project.title || 'Untitled Project';
+
+    // Create year element
+    const year = document.createElement('p');
+    year.textContent = project.year || '';
+    year.classList.add('project-year'); // optional: for styling
+
+    // Image
+    const img = document.createElement('img');
+    img.src = project.image || '';
+    img.alt = project.title || 'Project image';
+
+    // Description
+    const p = document.createElement('p');
+    p.textContent = project.description || '';
+
+    // Append elements to article
+    article.appendChild(heading);
+    article.appendChild(year); // added year here
+    article.appendChild(img);
+    article.appendChild(p);
+
+    containerElement.appendChild(article);
+  });
+}
+
+export async function fetchGitHubData(username) {
+  // return statement here
+  return fetchJSON(`https://api.github.com/users/${username}`);
+}

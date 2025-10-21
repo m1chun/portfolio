@@ -1,0 +1,65 @@
+[
+    {
+        "title": "Multichannel Sensor Analysis for Fall Detection: Evaluating Accelerometer, Gyroscope, and Magnetometer Data in Real-World Settings",
+        "year": "July 2025 - August 2025",
+        "image": "../images/timeseries-final-boxplot copy.png",
+        "description": "Processed wearable sensor data (accelerometer, gyroscope, magnetometer) for fall detection analysis.\nDeveloped and compared tabular vs. time-series machine learning models using Scikit-learn and Aeon.\nIdentified acceleration-only models as most effective (F1 = 0.99, AUC = 1.0)\nHighlighted an efficient, interpretable approach for real-world fall detection"
+    },
+    {
+        "title": "Pizza Perplexion Data Visualization",
+        "year": "October 2025",
+        "image": "../images/pizza-perplexion.png",
+        "description": "Visualizing trends from a grocery store dataset. I found that Whole Foods pizzas are more expensive yet not healthier than pizzas from Walmart and Target."
+    },
+    {
+        "title": "Predicting Recipe Health Final Project",
+        "year": "June 2025",
+        "image": "../images/recipe-health.png",
+        "description": "Built a supervised ML pipeline in Scikit-learn to classify recipe healthiness using ingredient data. Cleaned and preprocessed text-based ingredients, engineered features like ingredient count and binary indicators. Improved F1 score from 0.67 to 0.77 through cross-validation and hyperparameter tuning. Published report and visualizations on GitHub Pages using Jupyter Notebook and Markdown"
+    },
+    {
+        "title": "Ut assumenda doloremque adipisci?",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Magni modi iure, iusto perferendis odit expedita perspiciatis quas, illum quo omnis ea facere dolore consequuntur voluptatibus deserunt sint ex. Tempora iusto ex asperiores ut ipsam repellendus dicta distinctio tempore."
+    },
+    {
+        "title": "Eligendi ex accusantium eveniet.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Eaque repellat cum incidunt odit. Labore adipisci ratione, vel in cumque tempora harum ducimus aperiam possimus error? In aliquid, aperiam fugiat veritatis molestiae tempora. Deserunt vitae vero error doloremque officiis!"
+    },
+    {
+        "title": "Aliquam voluptatum sed quo.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Iste quod aspernatur, nam esse rerum non totam dolores sint natus dolorem aut sapiente, maiores quo pariatur alias. Asperiores praesentium obcaecati aliquid impedit aut illum reprehenderit veniam vero quo ea?"
+    },
+    {
+        "title": "Veritatis quas voluptas distinctio!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Odio minima autem omnis temporibus, incidunt est. Minus corrupti quaerat repellat sed harum hic laudantium quas similique delectus accusamus, quos laboriosam ea suscipit temporibus? Distinctio minima facere eveniet aperiam voluptatibus?"
+    },
+    {
+        "title": "Commodi voluptates pariatur aliquam?",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Rerum velit blanditiis aliquam vel excepturi id provident aliquid eligendi accusamus? Iste veritatis iure odio, expedita nostrum deserunt amet laudantium, rem officia, qui tenetur explicabo facere? Dignissimos in necessitatibus aspernatur."
+    },
+    {
+        "title": "Saepe reiciendis vitae culpa!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Dolorem nisi repellat, molestiae vel at dolore iure neque ratione qui eaque dignissimos ab dolores perspiciatis corporis cum, autem aliquid! Ab illo laboriosam, vero ex aspernatur consequuntur. Ab, sed impedit!"
+    },
+    {
+        "title": "Repellat unde delectus vel!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Assumenda voluptatem numquam, culpa eum sed ex error beatae nihil dolor possimus, exercitationem nemo modi cumque enim nam! Culpa quaerat et quam dolorum inventore similique facere quisquam id accusantium. Laborum."
+    },
+    {
+        "title": "Quo et odio qui.",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "A odit ut perspiciatis, libero aperiam inventore iste dignissimos enim commodi nemo nesciunt at ipsum tempore maxime molestiae natus consectetur iusto eum ratione iure atque nam! Voluptatum doloremque cupiditate neque?"
+    },
+    {
+        "title": "Voluptatum minus accusantium eos!",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Repudiandae magni pariatur suscipit corporis iusto debitis, deserunt quae amet obcaecati a. Neque ea reiciendis officiis sapiente, quas atque tempora tenetur quisquam culpa harum beatae accusamus enim quis voluptatum vero."
+    }
+]

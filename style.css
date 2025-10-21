@@ -82,18 +82,54 @@ button:hover {
   opacity: 0.9;
 }
 
-.projects{
+/* Container for all projects */
+.projects {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
-  gap: 1em;
+  grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* responsive columns */
+  gap: 2em; /* spacing between cards */
+  margin: 20px 0 60px 0;
 }
 
-.projects article{
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 3;
-  gap: 1em;
+/* Individual project card */
+.projects article {
+  display: flex;              /* use flex to stack content vertically */
+  flex-direction: column;
+  gap: 0.5em;                 /* space between title, image, description */
+  padding: 1em;               /* inner padding */
+  border: 1px solid #ddd;     /* subtle border */
+  border-radius: 8px;         /* rounded corners */
+  background-color: #fff;     /* card background */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* subtle shadow */
 }
+
+/* Project image styling */
+.projects article img {
+  max-width: 100%;            /* image fits card width */
+  height: auto;               /* maintain aspect ratio */
+  border-radius: 6px;         /* optional rounded corners */
+  object-fit: cover;          /* crop nicely if image is larger than container */
+}
+
+/* Project title */
+.projects article h2, 
+.projects article h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* Project description */
+.projects article p {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.project-year {
+  font-style: italic;
+  color: #555;
+  margin: 0 0 0.5em 0;
+}
+
 
 h1{
   font-size: 400%;
@@ -109,7 +145,7 @@ h1, h2, h3, h4, h5, h6{
 }
 
 section {
-  background: oklch(91.462% 0.01087 204.625 / 0.386);;
+  background: oklch(91.462% 0.01087 204.625 / 0.386);
   border-radius: 0.5em;
   padding: 1.5em 2em;
   margin-bottom: 2em;
@@ -150,7 +186,7 @@ a:hover {
   justify-content: center; 
   flex-wrap: wrap;         
   gap: 16px;              
-  margin: 2rem 0;         
+  margin: 40px 0 60px 0;         
 }
 
 .photo-box {
@@ -195,3 +231,29 @@ a:hover {
   font-family: inherit;
   font-size: 80%;
 }
+
+#profile-stats {
+  padding: 20px;              /* space inside the container */
+  background-color: oklch(91.462% 0.01087 204.625 / 0.386); /* optional: a light background to separate it visually */
+  border-radius: 8px;    /* optional: rounded corners */
+  margin: 20px 0 60px 0;     
+}
+
+#profile-stats dl {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 10px; /* space between grid items */
+}
+
+#profile-stats dt {
+  grid-row: 1; /* place all dt elements in the first row */
+  font-weight: bold;
+  text-align: center;
+}
+
+#profile-stats dd {
+  grid-row: 2; /* place all dd elements in the second row */
+  margin: 0; /* remove default margin */
+  text-align: center;
+}
+
