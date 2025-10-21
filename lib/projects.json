@@ -2,7 +2,7 @@
     {
         "title": "Multichannel Sensor Analysis for Fall Detection: Evaluating Accelerometer, Gyroscope, and Magnetometer Data in Real-World Settings",
         "year": "July 2025 - August 2025",
-        "image": "../images/timeseries-final-boxplot copy.png",
+        "image": "../images/timeseries-final-boxplot.png",
         "description": "Processed wearable sensor data (accelerometer, gyroscope, magnetometer) for fall detection analysis.\nDeveloped and compared tabular vs. time-series machine learning models using Scikit-learn and Aeon.\nIdentified acceleration-only models as most effective (F1 = 0.99, AUC = 1.0)\nHighlighted an efficient, interpretable approach for real-world fall detection"
     },
     {
