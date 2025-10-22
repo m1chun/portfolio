@@ -1,36 +1,40 @@
-import { fetchJSON, renderProjects } from './global.js';
+import { fetchJSON, renderProjects, fetchGitHubData } from './global.js';
 
-async function initProjects() {
-  const projects = await fetchJSON('/lib/projects.json');
+const projectsContainer = document.querySelector('.projects');
+const profileStatsContainer = document.querySelector('#profile-stats');
+
+// Determine correct base path for GitHub Pages
+const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+  ? "/"        // local dev
+  : "/portfolio/"; // replace 'portfolio' with your repo name if different
+
+// Render latest 3 projects
+async function showLatestProjects() {
+  const projects = await fetchJSON(`${BASE_PATH}lib/projects.json`);
   if (!projects) return;
 
-  const latestProjects = projects.slice(0, 3);
+  const latestProjects = [...projects]
+    .sort((a, b) => parseInt(b.year) - parseInt(a.year))
+    .slice(0, 3);
 
-  const projectsContainer = document.querySelector('.projects');
-
-  renderProjects(latestProjects, projectsContainer, 'h3');
+  renderProjects(latestProjects, projectsContainer, 'h2');
 }
 
-initProjects();
+// Fetch and display GitHub stats
+async function showGitHubStats() {
+  const githubData = await fetchGitHubData('m1chun');
+  if (!githubData || !profileStatsContainer) return;
 
-import { fetchGitHubData } from './global.js';
-
-async function displayGitHubStats() {
-  const githubData = await fetchGitHubData('m1chun'); // fetch the data
-
-  const profileStats = document.querySelector('#profile-stats');
-
-  if (profileStats && githubData) {
-    profileStats.innerHTML = `
-      <dl>
-        <dt>Public Repos:</dt><dd>${githubData.public_repos}</dd>
-        <dt>Public Gists:</dt><dd>${githubData.public_gists}</dd>
-        <dt>Followers:</dt><dd>${githubData.followers}</dd>
-        <dt>Following:</dt><dd>${githubData.following}</dd>
-      </dl>
-    `;
-  }
+  profileStatsContainer.innerHTML = `
+    <dl>
+      <dt>Public Repos:</dt><dd>${githubData.public_repos}</dd>
+      <dt>Public Gists:</dt><dd>${githubData.public_gists}</dd>
+      <dt>Followers:</dt><dd>${githubData.followers}</dd>
+      <dt>Following:</dt><dd>${githubData.following}</dd>
+    </dl>
+  `;
 }
 
-// Call the function
-displayGitHubStats();
+// Run both functions
+showLatestProjects();
+showGitHubStats();
