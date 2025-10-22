@@ -234,9 +234,7 @@ a:hover {
 
 #profile-stats {
   padding: 20px;              /* space inside the container */
-  background-color: oklch(91.462% 0.01087 204.625 / 0.386); /* optional: a light background to separate it visually */
   border-radius: 8px;    /* optional: rounded corners */
-  margin: 20px 0 60px 0;     
 }
 
 #profile-stats dl {
