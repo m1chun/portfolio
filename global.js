@@ -14,7 +14,6 @@ const BASE_PATH = (location.hostname === "localhost" || location.hostname === "1
 // );
 
 // currentLink?.classList.add('current');
-
 let pages = [
   { url: 'index.html', title: 'Home' },
   { url: 'projects/', title: 'Projects' },
@@ -126,38 +125,46 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
   containerElement.innerHTML = '';
 
   if (!projects || projects.length === 0) {
-    // Show placeholder if no projects
     const placeholder = document.createElement('p');
     placeholder.textContent = 'No projects available at the moment.';
     containerElement.appendChild(placeholder);
     return;
   }
 
+  // Automatically set the correct base path for images
+  const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+    ? ""                     // running in Live Server → use plain relative paths
+    : "/portfolio/";    // 🔁 replace with your actual GitHub repo name
+
   projects.forEach(project => {
     const article = document.createElement('article');
 
-    // Create dynamic heading
+    // Heading
     const heading = document.createElement(headingLevel);
     heading.textContent = project.title || 'Untitled Project';
 
-    // Create year element
+    // Year
     const year = document.createElement('p');
     year.textContent = project.year || '';
-    year.classList.add('project-year'); // optional: for styling
+    year.classList.add('project-year');
 
     // Image
     const img = document.createElement('img');
-    img.src = project.image || '';
-    img.alt = project.title || 'Project image';
+    if (project.image) {
+      img.src = project.image.startsWith('http')
+        ? project.image
+        : `${BASE_PATH}${project.image}`;
+      img.alt = project.title || 'Project image';
+    }
 
     // Description
     const p = document.createElement('p');
     p.textContent = project.description || '';
 
-    // Append elements to article
+    // Append all elements
     article.appendChild(heading);
-    article.appendChild(year); // added year here
-    article.appendChild(img);
+    article.appendChild(year);
+    if (project.image) article.appendChild(img);
     article.appendChild(p);
 
     containerElement.appendChild(article);

@@ -90,16 +90,16 @@ button:hover {
   margin: 20px 0 60px 0;
 }
 
-/* Individual project card */
 .projects article {
-  display: flex;              /* use flex to stack content vertically */
+  display: flex;
   flex-direction: column;
-  gap: 0.5em;                 /* space between title, image, description */
-  padding: 1em;               /* inner padding */
-  border: 1px solid #ddd;     /* subtle border */
-  border-radius: 8px;         /* rounded corners */
-  background-color: #fff;     /* card background */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* subtle shadow */
+  gap: 0.5em;
+  padding: 1em;
+  border: 1px solid oklch(80% 0.02 250 / 0.2);
+  border-radius: 8px;
+  background-color: canvas; /* ✅ auto light/dark */
+  box-shadow: 0 2px 5px oklch(0 0 0 / 0.1);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 /* Project image styling */
@@ -126,10 +126,9 @@ button:hover {
 
 .project-year {
   font-style: italic;
-  color: #555;
+  color: color-mix(in oklch, canvastext 60%, canvas 40%);
   margin: 0 0 0.5em 0;
 }
-
 
 h1{
   font-size: 400%;
