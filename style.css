@@ -254,3 +254,64 @@ a:hover {
   text-align: center;
 }
 
+#projects-pie-plot {
+  max-width: 20em;
+  margin-block: 2em;
+  overflow: visible;
+}
+
+.legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9em, 1fr));
+  gap: 1rem;
+  list-style: none;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 14px;
+  flex: 1;
+}
+
+.legend .swatch{
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  aspect-ratio: 1 / 1;
+  background-color: var(--color);
+  border-radius: 50%;
+}
+
+.legend-item{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.container {
+  display: flex;
+  align-items: center; /* vertically centers the legend with the chart */
+  gap: 2rem;           /* space between chart and legend */
+  justify-content: center; /* centers the whole group horizontally */
+  flex-wrap: wrap;     /* allows them to stack if the screen is narrow */
+}
+
+&:has(path:hover) {
+  path:not(:hover) {
+    opacity: 0.5;
+  }
+}
+
+path {
+  transition: 300ms;
+  cursor: pointer;
+}
+
+.selected {
+  --color: oklch(60% 45% 0) !important;
+
+  &:is(path) {
+    fill: var(--color);
+  }
+}
