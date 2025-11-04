@@ -232,26 +232,30 @@ a:hover {
 }
 
 #profile-stats {
-  padding: 20px;              /* space inside the container */
-  border-radius: 8px;    /* optional: rounded corners */
+  padding: 20px;             
+  border-radius: 8px;    
 }
 
 #profile-stats dl {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-  gap: 10px; /* space between grid items */
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 10px;
 }
 
 #profile-stats dt {
-  grid-row: 1; /* place all dt elements in the first row */
-  font-weight: bold;
+  grid-row: 1; 
   text-align: center;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
 }
 
 #profile-stats dd {
-  grid-row: 2; /* place all dd elements in the second row */
-  margin: 0; /* remove default margin */
+  grid-row: 2; 
+  margin: 0; 
   text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 #projects-pie-plot {
@@ -314,4 +318,41 @@ path {
   &:is(path) {
     fill: var(--color);
   }
+}
+
+.stats {
+  display: flex;
+  gap: 2rem;               
+  padding: 20px 0;
+  justify-content: center;  
+  flex-wrap: wrap;         
+}
+
+.stats dl {
+  display: flex;
+  flex-direction: column;   
+  align-items: center;      
+  margin: 0;
+  border-radius: 0.5em;
+  padding: 1em 1.5em;
+  min-width: 8em;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stats dt {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #6b7280;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin-bottom: 0.25rem;
+  text-align: center;
+}
+
+.stats dd {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #111;
+  margin: 0;
+  text-align: center;
 }
