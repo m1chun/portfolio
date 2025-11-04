@@ -246,7 +246,6 @@ a:hover {
   grid-row: 1; 
   text-align: center;
   font-weight: 600;
-  color: #6b7280;
   text-transform: uppercase;
 }
 
@@ -342,7 +341,6 @@ path {
 .stats dt {
   font-size: 0.8rem;
   font-weight: 600;
-  color: #6b7280;
   letter-spacing: 0.05em;
   text-transform: uppercase;
   margin-bottom: 0.25rem;
@@ -352,7 +350,19 @@ path {
 .stats dd {
   font-size: 2rem;
   font-weight: 700;
-  color: #111;
   margin: 0;
   text-align: center;
 }
+
+/* Make gridlines subtle */
+.tick line {
+  stroke: #ccc;           /* light gray */
+  stroke-opacity: 0.4;    /* semi-transparent */
+  shape-rendering: crispEdges;
+}
+
+path.domain {
+  stroke: #999;           /* axis baseline */
+  stroke-width: 1;
+}
+
