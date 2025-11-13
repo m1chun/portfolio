@@ -143,7 +143,6 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     // Heading
     const heading = document.createElement(headingLevel);
     heading.textContent = project.title || 'Untitled Project';
-
     // Year
     const year = document.createElement('p');
     year.textContent = project.year || '';
@@ -165,6 +164,16 @@ export function renderProjects(projects, containerElement, headingLevel = 'h2') 
     // Append all elements
     article.appendChild(heading);
     article.appendChild(year);
+
+    if (project.url) {
+      const projectLink = document.createElement('a');
+      projectLink.href = project.url;
+      projectLink.textContent = "Check out my project!";
+      projectLink.classList.add('project-link');
+      projectLink.rel = "noopener";
+      article.appendChild(projectLink);
+    }
+
     if (project.image) article.appendChild(img);
     article.appendChild(p);
 

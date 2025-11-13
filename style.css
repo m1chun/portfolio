@@ -453,3 +453,38 @@ circle.selected {
 #chart {
   margin-bottom: 2em;
 }
+
+/* Base style for project links */
+.project-link {
+  display: inline-block;       /* allows padding and margin */
+  margin-top: 0.5rem;          /* spacing from other content */
+  padding: 0.4rem 0.8rem;      /* internal padding */
+  color: var(--color-accent);              /* link color */
+  text-decoration: none;       /* remove underline */
+  border: 1px solid var(--color-accent);   /* optional border for button-like style */
+  border-radius: 5px;          /* rounded corners */
+  font-weight: 500;
+  transition: all 0.2s ease;   /* smooth hover effect */
+}
+
+/* Hover effect */
+.project-link:hover {
+  background-color: var(--color-accent);
+  color: white;
+  text-decoration: none;
+  transform: translateY(-2px); /* subtle lift effect */
+}
+
+/* Optional focus style for accessibility */
+.project-link:focus {
+  outline: 2px dashed var(--color-accent);
+  outline-offset: 3px;
+}
+
+/* Optional for smaller screens */
+@media (max-width: 600px) {
+  .project-link {
+    display: block;
+    width: fit-content;
+  }
+}
