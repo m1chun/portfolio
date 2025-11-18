@@ -382,6 +382,7 @@ function onTimeSliderChange() {
   // Filter commits up to selected time
   filteredCommits = commits.filter(d => d.datetime <= commitMaxTime);
   updateScatterPlot(filteredCommits);
+  updateFileDisplay(filteredCommits);  // <-- ADD THIS
 }
 
 // Attach listener
@@ -389,3 +390,54 @@ timeSlider.addEventListener("input", onTimeSliderChange);
 
 // Initialize slider display
 onTimeSliderChange();
+
+
+function updateFileDisplay(filteredCommits) {
+  // Flatten all lines from filtered commits
+  let lines = filteredCommits.flatMap(d => d.lines);
+
+  // Group lines by file
+  let files = d3.groups(lines, d => d.file)
+    .map(([name, lines]) => ({ name, lines }))
+    .sort((a, b) => b.lines.length - a.lines.length); // sort descending
+
+  const colors = d3.scaleOrdinal(d3.schemeTableau10);
+
+  // Compute maximum number of lines in any file for scaling
+  const maxLines = d3.max(files, d => d.lines.length);
+  const widthScale = d3.scaleLinear().domain([0, maxLines]).range([0, 100]); // percent
+
+  // Bind data to file containers
+  let filesContainer = d3.select('#files')
+    .selectAll('div.file')
+    .data(files, d => d.name)
+    .join(
+      enter => enter.append('div')
+        .attr('class', 'file')
+        .call(div => {
+          // dt for filename + total lines
+          const dt = div.append('dt');
+          dt.append('code'); // filename
+          dt.append('span').attr('class', 'total-lines'); // line count
+          div.append('dd'); // container for dots
+        })
+    );
+
+  // Update filename and total lines
+  filesContainer.select('dt code').text(d => d.name);
+  filesContainer.select('dt .total-lines').text(d => `${d.lines.length} lines`);
+
+  // Update dots inside dd
+  filesContainer.select('dd')
+    .html('') // clear previous dots
+    .selectAll('span.loc')
+    .data(d => d.lines)
+    .join('span')
+    .attr('class', 'loc')
+    .style('background-color', d => colors(d.type));
+
+}
+
+
+
+

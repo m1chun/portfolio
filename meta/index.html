@@ -1,56 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meta</title>
-    <link rel = 'stylesheet', href = '../style.css'>
-    <link rel="stylesheet" href="meta.css">
-    <script type ='module' src='../global.js'></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="meta.css">
+  <script type="module" src="../global.js"></script>
 </head>
 <body>
-    <nav></nav>
-    <h1>Meta</h1>
-    <script type="module" src="main.js"></script>
-    <section>
-        <h2>Summary</h2>
-        <hr />
-        <div id="stats"></div>
-    </section>
+  <nav></nav>
+  <h1>Meta</h1>
 
-    <div class="time-filter">
+  <script type="module" src="main.js"></script>
+
+  <section>
+    <h2>Summary</h2>
+    <hr />
+    <div id="stats"></div>
+  </section>
+
+  <section class="time-filter">
     <label>
-        Show commits until:
-        <input
-        type="range"
-        id="commit-progress"
-        min="0"
-        max="100"
-        value="100"
-        />
+      Show commits until:
+      <input type="range" id="commit-progress" min="0" max="100" value="100">
     </label>
     <time id="commit-time"></time>
-    </div>
+  </section>
 
+  <!-- File list -->
+  <dl id="files">
+    <!-- D3 will populate this:
+    <div>
+      <dt><code>file.name</code></dt>
+      <dd>
+        {file.lines.length} lines
+        <div class="line"></div> <!-- visual bar -->
+      </dd>
+    </div>
+  </dl>
+
+  <section>
     <h2>Commits by time of day</h2>
     <div id="chart"></div>
+  </section>
 
-    <dl id="commit-tooltip" class="info tooltip" hidden>
+  <!-- Commit tooltip -->
+  <dl id="commit-tooltip" class="info tooltip" hidden>
     <dt>Commit</dt>
-    <dd>
-        <a href="" id="commit-link" target="_blank"></a>
-    </dd>
-
+    <dd><a href="" id="commit-link" target="_blank"></a></dd>
     <dt>Date</dt>
     <dd id="commit-date"></dd>
+    <!-- Add: Time, author, lines edited if needed -->
+  </dl>
 
-    <!-- Add: Time, author, lines edited -->
-    </dl>
-
-    <section>
+  <section>
     <p id="selection-count">No commits selected</p>
     <dl id="language-breakdown" class="stats"></dl>
-    </section>
+  </section>
 
 </body>
 </html>

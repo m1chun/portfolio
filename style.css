@@ -404,6 +404,10 @@ circle {
   transition: 200ms;
   transform-origin: center;
   transform-box: fill-box;
+  @starting-style {
+    r: 0;
+    transition: all 200ms, r calc(var(--r) * 100ms);
+  }
 }
 
 circle:hover {
@@ -488,3 +492,59 @@ circle.selected {
     width: fit-content;
   }
 }
+
+#files {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  margin-top: 1em;
+  margin-bottom: 1em;
+
+  > div {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: subgrid;
+  }
+
+  dt {
+    grid-column: 1;
+  }
+
+  dd {
+    grid-column: 2;
+  }
+}
+
+.file dt {
+  display: flex;
+  flex-direction: column; /* filename on top, line count below */
+  font-weight: 600;
+}
+
+.total-lines {
+  font-size: 0.9em;
+  margin-top: 0.2em; /* spacing below filename */
+}
+
+dd {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.1em;
+  margin-top: 0.3em;
+  justify-content: flex-start; /* dots on the right side of container */
+}
+
+.loc {
+  width: 0.5em;
+  height: 0.5em;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0.1em;
+}
+
+#files > .file {
+  margin-bottom: 0.75em; /* space between each file */
+  padding-bottom: 0.5em; /* optional, extra inner spacing */
+  border-bottom: 1px solid #ddd; /* optional, visual separator */
+}
+
+
