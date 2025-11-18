@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meta</title>
     <link rel = 'stylesheet', href = '../style.css'>
+    <link rel="stylesheet" href="meta.css">
     <script type ='module' src='../global.js'></script>
 </head>
 <body>
@@ -16,6 +17,20 @@
         <hr />
         <div id="stats"></div>
     </section>
+
+    <div class="time-filter">
+    <label>
+        Show commits until:
+        <input
+        type="range"
+        id="commit-progress"
+        min="0"
+        max="100"
+        value="100"
+        />
+    </label>
+    <time id="commit-time"></time>
+    </div>
 
     <h2>Commits by time of day</h2>
     <div id="chart"></div>
@@ -36,5 +51,6 @@
     <p id="selection-count">No commits selected</p>
     <dl id="language-breakdown" class="stats"></dl>
     </section>
+
 </body>
 </html>

@@ -1,0 +1,14 @@
+/* Make ONLY the time-filter section break out of the 100ch body width */
+.time-filter {
+  width: 70vw;                          /* full viewport width */
+  margin-left: calc(50% - 35vw);
+  padding: 0 1rem;                        /* optional side padding */
+  box-sizing: border-box;
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+/* Make the slider itself stretch within the full-width block */
+#commit-progress {
+  width: 100%;
+}
