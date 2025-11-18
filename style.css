@@ -493,11 +493,67 @@ circle.selected {
   }
 }
 
+#scatter-plot h2,
+#scatter-files h2 {
+  margin: 0 0 0rem 0;
+}
+
+#files dt, #files dd {
+  margin: 0;
+}
+
+.scrolly {
+  padding: 1em 1em;
+  margin-bottom: 1em;
+}
+
+.chart-column {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 2rem;
+  align-self: flex-start;
+  max-height: calc(100vh - 2rem); /* full available sticky height */
+  overflow-y: auto;
+  gap: 1rem;
+}
+
+/* Chart takes its space first */
+#scatter-plot {
+  width: 100%;
+  flex-shrink: 0; /* prevent shrinking */
+  display: block;
+  margin-bottom: 0;
+}
+
+/* Files section limited in height, scrollable if too many files */
+#scatter-files {
+  width: 100%;
+  display: block;
+  margin-top: 0;
+  max-height: 30%;       /* adjust this % as needed */
+  overflow-y: auto;      /* scroll if content exceeds max-height */
+}
+
+/* Container: flex row */
+.scrolly-container {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem; /* space between text and chart/files */
+  align-items: flex-start; 
+}
+
+/* Left column: story text */
+.story-column {
+  flex: 1 1 40%; /* 40% of width, flexible */
+  max-width: 40ch; /* optional max width for readability */
+}
+
+/* Keep previous grid styles for files */
 #files {
   display: grid;
   grid-template-columns: 1fr 4fr;
-  margin-top: 1em;
-  margin-bottom: 1em;
 
   > div {
     grid-column: 1 / -1;
@@ -511,26 +567,23 @@ circle.selected {
 
   dd {
     grid-column: 2;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.1em;
+    justify-content: flex-start;
   }
 }
 
 .file dt {
   display: flex;
-  flex-direction: column; /* filename on top, line count below */
+  flex-direction: column;
   font-weight: 600;
+  font-size: 1em;
 }
 
 .total-lines {
-  font-size: 0.9em;
-  margin-top: 0.2em; /* spacing below filename */
-}
-
-dd {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.1em;
-  margin-top: 0.3em;
-  justify-content: flex-start; /* dots on the right side of container */
+  font-size: 0.75em;
+  margin-top: 0.2em;
 }
 
 .loc {
@@ -542,9 +595,10 @@ dd {
 }
 
 #files > .file {
-  margin-bottom: 0.75em; /* space between each file */
-  padding-bottom: 0.5em; /* optional, extra inner spacing */
-  border-bottom: 1px solid #ddd; /* optional, visual separator */
+  margin-bottom: 0.75em;
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid #ddd;
 }
+
 
 

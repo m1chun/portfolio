@@ -20,29 +20,36 @@
     <div id="stats"></div>
   </section>
 
+<section class="scrolly">
+  <div id="scrolly-1" class="scrolly-container">
+    
+    <!-- Left column: story text -->
+    <div id="scatter-story" class="story-column">
+      <h2>History of Commits</h2>
+      <!-- Steps inserted here by JS -->
+    </div>
+
+    <!-- Right column: chart and files -->
+    <div class="chart-column">
+        <div id="scatter-files">
+        <h2>Files</h2>
+        <dl id="files"></dl>
+      </div>
+      <div id="scatter-plot">
+        <h2>Commits by time of day</h2>
+        <div id="chart"></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
   <section class="time-filter">
     <label>
       Show commits until:
       <input type="range" id="commit-progress" min="0" max="100" value="100">
     </label>
     <time id="commit-time"></time>
-  </section>
-
-  <!-- File list -->
-  <dl id="files">
-    <!-- D3 will populate this:
-    <div>
-      <dt><code>file.name</code></dt>
-      <dd>
-        {file.lines.length} lines
-        <div class="line"></div> <!-- visual bar -->
-      </dd>
-    </div>
-  </dl>
-
-  <section>
-    <h2>Commits by time of day</h2>
-    <div id="chart"></div>
   </section>
 
   <!-- Commit tooltip -->
