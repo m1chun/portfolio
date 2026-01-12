@@ -96,7 +96,7 @@ function renderPieChart(projectsGiven) {
 }
 
 // Fetch projects
-fetch('../lib/projects.json')
+fetch('/lib/projects.json')
   .then(response => response.json())
   .then(projects => {
     allProjects = projects;
