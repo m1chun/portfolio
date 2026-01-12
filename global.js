@@ -20,7 +20,8 @@ let pages = [
   { url: 'contact/', title: 'Contact' },
   { url: 'resume/', title: 'Resume' },
   { url: 'meta/', title: 'Meta' },
-  { url: 'https://github.com/m1chun', title: "GitHub" }
+  { url: 'https://github.com/m1chun', title: "GitHub" },
+  { url: 'https://www.linkedin.com/in/mieko-chun/', title: "LinkedIn" }
 ];
 
 let nav = document.querySelector('nav'); 

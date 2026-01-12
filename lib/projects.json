@@ -1,22 +1,29 @@
 [
     {
+        "title": "Where California Burns",
+        "year": "2025",
+        "url": "https://m1chun.github.io/where-california-burns/",
+        "image": "/images/where-ca-burns.png",
+        "description": "Final project for UCSD DSC 106: Data Visualization Class. In this project we build a website that allows users to explore different physioregions of California and how their environment connects to wildfire risk. We implemented a choose your own adventure style interface that walks users through different geospacial visualizations of environmental data."
+    },
+    {
         "title": "Multichannel Sensor Analysis for Fall Detection: Evaluating Accelerometer, Gyroscope, and Magnetometer Data in Real-World Settings",
         "year": "2025",
-        "url": "N/A",
+        "url": "/projects/Insight-Paper.pdf",
         "image": "/images/timeseries-final-boxplot.png",
         "description": "Processed wearable sensor data (accelerometer, gyroscope, magnetometer) for fall detection analysis.\nDeveloped and compared tabular vs. time-series machine learning models using Scikit-learn and Aeon.\nIdentified acceleration-only models as most effective (F1 = 0.99, AUC = 1.0)\nHighlighted an efficient, interpretable approach for real-world fall detection"
     },
     {
         "title": "Pizza Perplexion Data Visualization",
         "year": "2025",
-        "url": "N/A",
+        "url": "/projects/pizza-perplexion.png",
         "image": "/images/pizza-perplexion.png",
         "description": "Visualizing trends from a grocery store dataset. I found that Whole Foods pizzas are more expensive yet not healthier than pizzas from Walmart and Target."
     },
     {
         "title": "Predicting Recipe Health Final Project",
         "year": "2025",
-        "url": "N/A",
+        "url": "https://manissen.github.io/predicting-recipe-health/",
         "image": "/images/recipe-health.png",
         "description": "Built a supervised ML pipeline in Scikit-learn to classify recipe healthiness using ingredient data. Cleaned and preprocessed text-based ingredients, engineered features like ingredient count and binary indicators. Improved F1 score from 0.67 to 0.77 through cross-validation and hyperparameter tuning. Published report and visualizations on GitHub Pages using Jupyter Notebook and Markdown"
     },
@@ -28,18 +35,18 @@
         "description": "For this project we made two propositions and created visualizations to support both sides, showing how the same data can be manipulated to fit different narratives. Our proposition is that Women living in red states have less access to abortion and travel out-of-state at a higher rate to receive abortions"
     },
     {
-        "title": "Analyzing the Relationship Between Environmental Threats and Global Health",
-        "year": "2025",
-        "url": "N/A",
-        "image": "/images/cogs108-project.png",
-        "description": "Climate change and pollution represent some of the most urgent threats to human health and the planet's future. While these environmental issues are known to impact daily life, analyzing their direct relationship with common health conditions reveals just how deeply intertwined they are with public well-being. Gaining a clearer understanding of these connections is essential for preparing for future global health challenges. This project explored the relationship between environmental threats—specifically air pollution and climate change—and health outcomes, focusing on respiratory infectious diseases. By integrating data from global air pollution, health statistics, and climate change datasets, we developed a consilidated resource for analysis."
-    },
-    {
         "title": "Bikewatching: Boston",
         "year": "2025",
         "url": "https://m1chun.github.io/bikewatching/",
         "image": "/images/bikewatching.png",
         "description": "This project explores bike activity in Boston and Cambridge Massachusetts throughout the day. In the morning there are many bikes arriving. The number of bikes balances out throughout the day and at night more bikes are departing."
+    },
+    {
+        "title": "Analyzing the Relationship Between Environmental Threats and Global Health",
+        "year": "2025",
+        "url": "/projects/cogs108-final-project.ipynb",
+        "image": "/images/cogs108-project.png",
+        "description": "Climate change and pollution represent some of the most urgent threats to human health and the planet's future. While these environmental issues are known to impact daily life, analyzing their direct relationship with common health conditions reveals just how deeply intertwined they are with public well-being. Gaining a clearer understanding of these connections is essential for preparing for future global health challenges. This project explored the relationship between environmental threats—specifically air pollution and climate change—and health outcomes, focusing on respiratory infectious diseases. By integrating data from global air pollution, health statistics, and climate change datasets, we developed a consilidated resource for analysis."
     },
     {
         "title": "DSC 30 Final Project",
@@ -75,12 +82,5 @@
         "url": "N/A",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "A odit ut perspiciatis, libero aperiam inventore iste dignissimos enim commodi nemo nesciunt at ipsum tempore maxime molestiae natus consectetur iusto eum ratione iure atque nam! Voluptatum doloremque cupiditate neque?"
-    },
-    {
-        "title": "DSC 40B Project",
-        "year": "2025",
-        "url": "N/A",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Repudiandae magni pariatur suscipit corporis iusto debitis, deserunt quae amet obcaecati a. Neque ea reiciendis officiis sapiente, quas atque tempora tenetur quisquam culpa harum beatae accusamus enim quis voluptatum vero."
     }
 ]
