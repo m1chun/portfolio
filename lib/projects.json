@@ -9,14 +9,14 @@
     {
         "title": "Multichannel Sensor Analysis for Fall Detection: Evaluating Accelerometer, Gyroscope, and Magnetometer Data in Real-World Settings",
         "year": "2025",
-        "url": "/projects/Insight-Paper.pdf",
+        "url": "https://github.com/m1chun/portfolio/blob/main/projects/Insight-Paper.pdf",
         "image": "/images/timeseries-final-boxplot.png",
         "description": "Processed wearable sensor data (accelerometer, gyroscope, magnetometer) for fall detection analysis.\nDeveloped and compared tabular vs. time-series machine learning models using Scikit-learn and Aeon.\nIdentified acceleration-only models as most effective (F1 = 0.99, AUC = 1.0)\nHighlighted an efficient, interpretable approach for real-world fall detection"
     },
     {
         "title": "Pizza Perplexion Data Visualization",
         "year": "2025",
-        "url": "/projects/pizza-perplexion.png",
+        "url": "https://github.com/m1chun/portfolio/blob/main/projects/pizza-perplexion.png",
         "image": "/images/pizza-perplexion.png",
         "description": "Visualizing trends from a grocery store dataset. I found that Whole Foods pizzas are more expensive yet not healthier than pizzas from Walmart and Target."
     },
